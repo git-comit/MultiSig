@@ -20,6 +20,11 @@ contract DeployMultiSigTest is Test {
         vm.deal(address(multiSig), 200 ether);
     }
 
+    function testFail_VarsNotSet() public {
+        DeployMultiSig deployMultiSig = new DeployMultiSig();
+        deployMultiSig.run();
+    }
+
     function testFail_NoRequiredSigs() public {
         address[] memory owners = new address[](4);
         owners[0] = 0xaaa3ED7b39A06E09C38ddf2252FB483AC9cDDC46;
