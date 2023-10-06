@@ -1,6 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
+/**
+ * @title MultiSig
+ * @author git_comit
+ * @notice A multisig wallet that requires a minimum number of signatures to execute a transaction.
+ * @dev
+ */
 contract MultiSig {
     error MultiSig__owners_required();
     error MultiSig__invalid_number_of_owners(uint256 required, uint256 actual);
